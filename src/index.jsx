@@ -1,10 +1,13 @@
 import reactDOM from "react-dom";
+import FundoMobile from "./FundoMobile/FundoMobile";
 import Navbar from "./Navbar/Navbar";
 
 function App() {
   return (
     <div>
       <Navbar />
+
+      <FundoMobile />
     </div>
   );
 }
