@@ -12,27 +12,5 @@ function App() {
   );
 }
 
-/* 
-    Navbar {
-      logo
-      logo-mobile
-      instagram-mobile
-      pesquisa
-      icones
-      icones-mobile
-    }
-
-    Corpo{
-
-    }
-
-    fundo-mobile{
-
-    }
-
-
-
-*/
-
 const element = document.querySelector(".root");
 reactDOM.render(App(), element);

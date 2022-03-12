@@ -1,3 +1,5 @@
+import IonIcon from "../Suporte/IonIcon";
+
 export default function FundoMobile() {
   return (
     <div class="fundo-mobile">
@@ -7,16 +9,5 @@ export default function FundoMobile() {
       <IonIcon name="heart-outline" />
       <IonIcon name="person-outline" />
     </div>
-  );
-}
-
-function IonIcon(props) {
-  return (
-    <ion-icon
-      name={props.name}
-      role="img"
-      class="md hydrated"
-      aria-label={props.name}
-    ></ion-icon>
   );
 }
