@@ -1,34 +1,63 @@
 import Post from "./Post";
 
 export default function Posts() {
+  /* Tentei fazer um array com obj dentro de obj 
+  mas me enrolei
+
+  Ex: 
+  {
+    usuario{
+      nome: "meowed",
+      imagem:"assets/img/meowed.svg",
+    },
+    conteudo: "assets/img/gato-telefone.svg",
+    curtidas{
+      usuario: "respondeai",
+      imagem: "respondeai",
+      quantidade: "101.523",
+    },
+  };
+
+  Sei que assim é o "padrão" mas me enrolei com as props
+  Acho que vou deixar assim, nos próximos eu desenvolvo melhor
+
+  */
   const arrayPost = [
     {
-      imagemPerfil: "assets/img/meowed.svg",
-      usuarioPost: "meowed",
-      imagemConteudo: "assets/img/gato-telefone.svg",
-      imagemCurtida: "assets/img/respondeai.svg",
-      usuarioCurtida: "respondeai",
-      numeroCurtidas: "101.523",
+      usuario: {
+        nome: "meowed",
+        imagem: "assets/img/meowed.svg",
+      },
+      conteudo: "assets/img/gato-telefone.svg",
+      curtidas: {
+        usuario: "respondeai",
+        imagem: "assets/img/respondeai.svg",
+        quantidade: "101.523",
+      },
     },
     {
-      imagemPerfil: "assets/img/barked.svg",
-      usuarioPost: "barked",
-      imagemConteudo: "assets/img/dog.svg",
-      imagemCurtida: "assets/img/adorable_animals.svg",
-      usuarioCurtida: "adorable_animals",
-      numeroCurtidas: "99.159",
+      usuario: {
+        nome: "barked",
+        imagem: "assets/img/barked.svg",
+      },
+      conteudo: "assets/img/dog.svg",
+      curtidas: {
+        usuario: "adorable_animals",
+        imagem: "assets/img/adorable_animals.svg",
+        quantidade: "99.159",
+      },
     },
   ];
   return (
     <div>
       {arrayPost.map((post) => (
         <Post
-          imagemPerfil={post.imagemPerfil}
-          usuarioPost={post.usuarioPost}
-          imagemConteudo={post.imagemConteudo}
-          imagemCurtida={post.imagemCurtida}
-          usuarioCurtida={post.usuarioCurtida}
-          numeroCurtidas={post.numeroCurtidas}
+          imagemPerfil={post.usuario.imagem}
+          usuarioPost={post.usuario.nome}
+          imagemConteudo={post.conteudo}
+          imagemCurtida={post.curtidas.imagem}
+          usuarioCurtida={post.curtidas.usuario}
+          numeroCurtidas={post.curtidas.quantidade}
         />
       ))}
     </div>
