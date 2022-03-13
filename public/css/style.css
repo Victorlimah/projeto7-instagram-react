@@ -136,6 +136,7 @@ body {
   text-overflow: ellipsis;
   text-align: center;
   height: 14px;
+  font-weight: bold;
 }
 
 .stories .setinha {
@@ -169,6 +170,7 @@ body {
 .post .topo .acoes {
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .post .topo img {
